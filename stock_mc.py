@@ -34,7 +34,7 @@ def plot_prices(initial, sim_prices_list):
 # Main function
 def main():
     # Page title
-    st.title("Stock Price Simulation")
+    st.title(f"Stock Price Simulation ({ticker})")
 
     # Sidebar
     st.sidebar.title("Simulation Settings")
