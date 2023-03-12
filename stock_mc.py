@@ -33,6 +33,10 @@ def plot_prices(initial, sim_prices_list):
 
 # Main function
 def main():
+    # Simulation settings
+    ticker = st.sidebar.text_input("Enter Ticker Symbol", "MSFT")
+    num_simulations = st.sidebar.slider("Number of Simulations", 1, 100, 10)
+    
     # Page title
     st.title(f"Stock Price Simulation ({ticker})")
 
@@ -40,9 +44,6 @@ def main():
     st.sidebar.title("Simulation Settings")
 
 
-    # Simulation settings
-    ticker = st.sidebar.text_input("Enter Ticker Symbol", "MSFT")
-    num_simulations = st.sidebar.slider("Number of Simulations", 1, 100, 10)
 
     st.sidebar.write("""
     ## Description
