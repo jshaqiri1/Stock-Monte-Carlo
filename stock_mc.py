@@ -60,7 +60,7 @@ def main():
     initial = df['Adj Close'].iloc[-1]
 
     og_date = (df['Adj Close'].index[0]).year
-    st.title('Data since...'
+    st.title('Data since...')
 
     # Run simulations
     sim_prices_list = []
