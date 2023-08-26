@@ -53,13 +53,13 @@ def main():
     # Sidebar
     st.sidebar.title("Simulation Settings")
     
-    st.sidebar.write(f"""
+    st.sidebar.write(f"
     ## Description
     This tool simulates future stock prices through a Monte-Carlo analysis using historical price data collected since {og_date}. 
     It calculates the expected returns, standard deviation, and volatility. It then simulates future prices based on those parameters.
     The tool can simulate multiple future price scenarios, allowing users to assess the potential range of future prices 
     and plan their investment strategy accordingly.
-    """)
+    ")
 
     
     # Run simulations
