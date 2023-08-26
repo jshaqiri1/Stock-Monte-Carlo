@@ -60,10 +60,8 @@ def main():
     initial = df['Adj Close'].iloc[-1]
 
     og_date = (df['Adj Close'].index[0]).year
-    
-    st.markdown(f"Data since {og_date}")
-    st.subheader(f"Data since {og_date}")
-    st.header(f"Data since {og_date}")
+
+    st.sidebar.write(f"Calculations are based on historical data for {ticker} since {og_date})
 
     # Run simulations
     sim_prices_list = []
