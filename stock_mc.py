@@ -59,9 +59,6 @@ def main():
     mu, sigma = calculate_returns(df)
     initial = df['Adj Close'].iloc[-1]
 
-    og_date = (df['Adj Close'].index[0]).year
-
-    st.sidebar.write(f"Calculations are based on historical data for {ticker} since {og_date})
 
     # Run simulations
     sim_prices_list = []
