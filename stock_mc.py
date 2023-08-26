@@ -40,18 +40,7 @@ def main():
     # Page title
     st.title(f"Stock Price Simulation ({ticker})")
 
-    # Sidebar
-    st.sidebar.title("Simulation Settings")
 
-
-
-    st.sidebar.write("""
-    ## Description
-    This tool simulates future stock prices through a Monte-Carlo analysis using historical price data to calculates the expected returns, standard deviation
-    and volatility. It then simulates future prices based on those parameters.
-    The tool can simulate multiple future price scenarios, allowing users to assess the potential
-    range of future prices and plan their investment strategy accordingly.
-    """)
 
     
     # Download data
@@ -59,6 +48,20 @@ def main():
     mu, sigma = calculate_returns(df)
     initial = df['Adj Close'].iloc[-1]
 
+    og_date = (df['Adj Close'].index[0]).year
+    
+    # Sidebar
+    st.sidebar.title("Simulation Settings")
+    
+    st.sidebar.write(f"""
+    ## Description
+    This tool simulates future stock prices through a Monte-Carlo analysis using historical price data collected since {og_date}. 
+    It calculates the expected returns, standard deviation, and volatility. It then simulates future prices based on those parameters.
+    The tool can simulate multiple future price scenarios, allowing users to assess the potential range of future prices 
+    and plan their investment strategy accordingly.
+    """)
+
+    
     # Run simulations
     sim_prices_list = []
     for i in range(num_simulations):
