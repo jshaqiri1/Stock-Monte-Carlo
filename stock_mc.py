@@ -59,6 +59,9 @@ def main():
     mu, sigma = calculate_returns(df)
     initial = df['Adj Close'].iloc[-1]
 
+    og_date = (df['Adj Close'].index[0]).year
+    st.title('Data since...'
+
     # Run simulations
     sim_prices_list = []
     for i in range(num_simulations):
